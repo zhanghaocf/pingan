@@ -1,0 +1,18 @@
+<!--pages/rule/rule.wxml-->
+<import src="../../templates/userHead/userHead.axml" />
+<template is="top" data="{{userInfo,hasUserInfo:true}}"></template>
+<view class='content'>
+  <view class='tright'>
+    <image onTap='returnFn' src='/assets//images/return.jpg' class='returnImg' mode='widthFix'></image>
+  </view>
+  <view class='intro'>
+    <view>活动说明：</view>
+    <view>1.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>2.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>3.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>4.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>5.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>6.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>7.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+  </view>
+</view>

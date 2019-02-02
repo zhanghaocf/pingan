@@ -1,0 +1,80 @@
+<import-sjs name="card" from="../../assets/sjs/card.sjs"/>
+<view onTap="clickmenu">
+  <scroll-view class="pagewrap" 
+              style="height:{{windowHeight}}px"
+              scroll-y="{{clickIndex==-1}}">
+    <view class="top">
+      <swiper indicator-dots="true"
+              autoplay="true" 
+              interval="5000" 
+              duration="500" 
+              circular="true" 
+              class='banner'>
+        <block a:for="{{bannerList}}" a:key="id">
+          <swiper-item>
+            <image src="{{item.img}}" class="slide-image swipeImg" mode="aspectFill"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="menuwrap">
+      <view class="menu {{clickIndex==1?'menuactive':''}}" data-menu='1' catchTap="classifyMenu">
+        全部分类
+        <image class="downtri" src="{{clickIndex==1?'/assets/images/down.png':'/assets/images/down1.png'}}" mode="aspectFill">
+      </view>
+      <view class="menu {{clickIndex==2?'menuactive':''}}" data-menu='2' catchTap="classifyMenu">
+        全部等级    
+      <image class="downtri" src="{{clickIndex==2?'/assets/images/down.png':'/assets/images/down1.png'}}" mode="aspectFill">
+      </view>
+      <view class="menu {{clickIndex==3?'menuactive':''}}" data-menu='3' catchTap="classifyMenu">    
+        卡组织   
+        <image class="downtri" src="{{clickIndex==3?'/assets/images/down.png':'/assets/images/down1.png'}}" mode="aspectFill">
+      </view>
+    </view>
+    <view class="content">
+      <block a:for="{{cardList}}" a:key="id">
+        <view class="cardlist">
+          <view class="title">        
+            {{item.name}}        
+            <view class="smalltitle {{card.getCls(item.level)}}">{{item.level}}</view>
+          </view>
+          <view class="describle">        
+            {{item.desc}}      
+          </view>
+          <view class="flexwrap overhidden">
+            <image lazyLoad="{{true}}" class="cardimg" src="{{item.img}}" mode="widthFix" />
+            <view class="descwrap overhidden">
+              <block a:for="{{item.characteristics}}" a:key="*this" a:for-item="chara">
+                <view class="desc">{{chara}}</view>
+              </block>
+            </view>
+          </view>
+          <view class="flexwrap justspace">
+            <view class="info">
+              <text class="number">{{item.number}}</text>人已申请
+            </view>
+            <view class="btn flexwrap" onTap='moveH5' hover-class="hoverclass" data-url="{{item.url}}">立即申请</view>
+          </view>
+        </view>
+      </block>
+      <view class="blackwrapwrap">
+        <view class="blackwrap {{clickIndex==-1?'disnone':''}}"></view>
+        <view class="stylelist {{clickIndex!=-1?'stylelistdown':''}}">
+          <block a:for="{{selectmenu}}" a:key='*this'>
+            <view hover-class="classifyactive" catchTap="selectClassify" data-item="{{item}}" class="classify {{classifyval==item?'menuactive':''}}">{{item}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- <view class='btngroup flexwrap'>
+  <image onTap='moveH5' class='btng' src='/assets/images/card.jpg' mode="widthFix"></image>
+  <view class='shareWrap'>
+    <button open-type='share' class='sharebtn'>立即分享</button>
+    <image class='btng' src='/assets/images/share.jpg' mode="widthFix"></image>
+  </view>
+</view> -->
+<!-- <view class='morewrap'>
+  <view class='more' onTap='moveH5' data-url="{{morethirdUrl}}">更多卡面</view>  ...
+</view> -->
