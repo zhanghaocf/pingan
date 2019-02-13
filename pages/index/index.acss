@@ -205,3 +205,8 @@ page{
 .classifyactive{
   background-color: rgba(204,204,204,.5);
 }
+.noinfo{
+  width:80%;
+  display: block;
+  margin: 0 auto;
+}

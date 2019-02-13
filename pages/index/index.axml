@@ -32,7 +32,11 @@
       </view>
     </view>
     <view class="content">
-      <block a:for="{{cardList}}" a:key="id">
+      <block a:if="{{cardList.length===0}}">
+          <image class="noinfo" src="/assets/images/default.png" mode="aspectFill" />
+          <view class="textcenter">信用卡没找到</view>
+      </block>
+      <block a:a:else a:for="{{cardList}}" a:key="id">
         <view class="cardlist">
           <view class="title">        
             {{item.name}}        

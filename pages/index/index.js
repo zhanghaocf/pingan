@@ -25,18 +25,18 @@ Page({
     },
     selectmenu:[],
     classifyList:[],
-    cardList: [
+    totalcardList:[
       {
         img: '/assets/images/car03.png',
         name: '平安车主卡',
         characteristics: ['加油享88折优惠', '最高110万全车人员意外保障', '线下消费双倍积分'],
         id: 1,
         url: 'https://zhgroot.cn/educational_administration_system/index.php/Home/Index/company/index/平安车主',
-        desc:'周六消费半价',
-        number:1653,
-        classify:'标准卡',
-        level:'金卡',
-        organazition:'中国银联'
+        desc: '周六消费半价',
+        number: 1653,
+        classify: '标准卡',
+        level: '金卡',
+        organazition: '中国银联'
       },
       {
         img: '/assets/images/pingan.png',
@@ -62,12 +62,15 @@ Page({
         level: '白金卡',
         organazition: '运通卡'
       }
-    ]
+    ],
+    cardList: []
   },
   onLoad() {
     var windowHeight = my.getSystemInfoSync().windowHeight;
+    var totalcardList = this.data.totalcardList;
     this.setData({
-      windowHeight: windowHeight
+      windowHeight: windowHeight,
+      cardList: totalcardList
     })
   },
   clickmenu(e){
@@ -112,12 +115,26 @@ Page({
   selectClassify(e){
     var classifyval=e.currentTarget.dataset.item;
     var oldclassifyval = this.data.classifyval;
+    var totalcardList = this.data.totalcardList;
+    var cardList=[];
     if (oldclassifyval===classifyval){
       return;
     }
+    console.log(classifyval)
+    if (classifyval === '* 全部分类' || classifyval === '* 全部等级' || classifyval === '* 卡组织'){
+      cardList = totalcardList;
+    }else{
+      totalcardList.forEach((item)=>{
+        if (item.classify === classifyval || item.level === classifyval || item.organazition === classifyval){
+          cardList.push(item)
+        }
+      })
+    }
+
     this.setData({
       classifyval: classifyval,
-      clickIndex:-1
+      clickIndex:-1,
+      cardList
     })
   }
 });
