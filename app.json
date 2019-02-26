@@ -4,7 +4,7 @@
     "pages/h5/h5"
   ],
   "window": {
-    "defaultTitle": "信用卡申请",
+    "defaultTitle": "平安信用卡申请",
     "titleBarColor": "#323239",
     "allowsBounceVertical":"false"
   }

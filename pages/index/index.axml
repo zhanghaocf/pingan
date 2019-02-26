@@ -1,4 +1,3 @@
-<import-sjs name="card" from="../../assets/sjs/card.sjs"/>
 <view onTap="clickmenu">
   <scroll-view class="pagewrap" 
               style="height:{{windowHeight}}px"
