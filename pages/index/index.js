@@ -1,9 +1,6 @@
 const app = getApp();
 Page({
   data: {
-    clickIndex:-1,
-    wrapbol:false,
-    classifyval:'',
     bannerList:[
       {
         id:1,
@@ -18,93 +15,98 @@ Page({
         img: '/assets/images/banner.png'
       }
     ],
-    classifymenu:{
-      1:['* 全部分类','标准卡','购物卡','车主卡','卡通卡','商旅卡','游戏卡','多倍积分卡','主题卡'],
-      2:['* 全部等级','普卡','金卡','白金卡','钻石卡','钛金卡','无限卡'],
-      3:['* 卡组织','Visa','Master Card','中国银联','运通卡']
+    adver:{
+      img: '/assets/images/adver.png',
+      url:'https://www.baidu.com'
     },
-    selectmenu:[],
-    classifyList:[],
-    totalcardList:[
+    marleftval:0,
+    cardList:[
       {
-        img: '/assets/images/car03.png',
-        name: '平安车主卡',
-        characteristics: ['加油享88折优惠', '最高110万全车人员意外保障', '线下消费双倍积分'],
-        id: 1,
-        url: 'https://zhgroot.cn/educational_administration_system/index.php/Home/Index/company/index/平安车主',
-        desc: '周六消费半价',
-        number: 1653,
-        classify: '标准卡',
-        level: '金卡',
-        organazition: '中国银联'
+        id:1,
+        img:'/assets/images/standard.jpg',
+        title:'平安标准卡',
+        desc:'海陆空意外保障',
+        url:'https://www.baidu.com'
       },
       {
-        img: '/assets/images/pingan.png',
-        name: '平安银行标准信用卡',
-        characteristics: ['海陆空意外保障', '享受金卡燃气意外保障', '72小时失卡保障'],
         id: 2,
-        url: 'https://zhgroot.cn/educational_administration_system/index.php/Home/Index/company/index/平安银行标准信用',
-        desc: '刷6次免年费',
-        number: 1267,
-        classify: '标准卡',
-        level: '金卡',
-        organazition: 'Visa'
+        img: '/assets/images/carowner.jpg',
+        title: '平安车主卡',
+        desc: '加油88折年返960',
+        url: 'https://www.baidu.com'
       },
       {
-        img: '/assets/images/bao.png',
-        name: '平安曼联红魔白金卡',
-        characteristics: ['办套卡享受首年免年费', '任意选取球星定制信用卡卡面', '曼联礼品轻松刷享'],
         id: 3,
-        url: 'https://zhgroot.cn/educational_administration_system/index.php/Home/Index/company/index/平安曼联红魔白金',
-        desc: '礼品轻松刷享',
-        number: 657,
-        classify: '购物卡',
-        level: '白金卡',
-        organazition: '运通卡'
+        img: '/assets/images/manlian.jpg',
+        title: '曼联红魔白金卡',
+        desc: '任选球星定制卡面',
+        url: 'https://www.baidu.com'
+      },
+      {
+        id: 4,
+        img: '/assets/images/uni.jpg',
+        title: '平安由你卡',
+        desc: '权益自由定制',
+        url: 'https://www.baidu.com'
+      },
+      {
+        id: 5,
+        img: '/assets/images/qiy.jpg',
+        title: '平安爱奇艺金卡',
+        desc: '年年送爱奇艺会员',
+        url: 'https://www.baidu.com'
+      },
+      {
+        id: 6,
+        img: '/assets/images/taobao.jpg',
+        title: '平安淘宝联名卡',
+        desc: '支付宝消费享积分',
+        url: 'https://www.baidu.com'
+      },
+      {
+        id: 7,
+        img: '/assets/images/fashion.jpg',
+        title: '平安BE@RBRICK时尚卡',
+        desc: '5款z至潮卡面任选',
+        url: 'https://www.baidu.com'
+      },
+       {
+        id: 8,
+        img: '/assets/images/travel.jpg',
+        title: '中国旅游卡金卡',
+        desc: '旅游消费超值回馈',
+        url: 'https://www.baidu.com'
       }
     ],
-    cardList: []
+    descList:[
+      {
+        id:1,
+        title:'满记低至',
+        zhe:'5折',
+        desc:'代金券天天乐购',
+        url:'https://www.baidu.com'
+      },
+      {
+        id: 2,
+        title: '在线冲立享',
+        zhe: '88折',
+        desc: '平安车主信用卡专享',
+        url: 'https://www.baidu.com'
+      }
+    ],
+    footer:{
+      jisu:'https://www.baidu.com',
+      jindu: 'https://www.baidu.com',
+      online: 'https://www.baidu.com',
+      remen: 'https://www.baidu.com',
+    },
+    isshow: false
   },
   onLoad() {
-    var windowHeight = my.getSystemInfoSync().windowHeight;
-    var totalcardList = this.data.totalcardList;
+    var marleftval=535*my.getSystemInfoSync().windowWidth/750;
     this.setData({
-      windowHeight: windowHeight,
-      cardList: totalcardList
+      marleftval
     })
-  },
-  clickmenu(e){
-    var clickIndex = this.data.clickIndex;
-     if(clickIndex==-1){
-       return;
-     }
-    this.setData({
-      clickIndex:-1,
-    })
-  },
-  classifyMenu(e){
-    var data=this.data;
-    var selectmenu = data.selectmenu;
-    var clickIndex = data.clickIndex;
-    var classifymenu =data.classifymenu;
-    var index=e.currentTarget.dataset.menu;
-    var obj={};
-    if (clickIndex!=index){
-      obj.clickIndex = index; 
-      obj.selectmenu = classifymenu[index];
-    }else{
-      obj.clickIndex=-1;
-    }
-    this.setData(obj);
-  },
-  onShareAppMessage() {
-    // 返回自定义分享信息
-    return {
-      title:'信用卡申请分享',
-      desc:'申请信用卡，让更多的人体验信用卡带来的优质体验！',
-      path:'/pages/index/index',
-      content:'申请信用卡,快来人扫我'
-    }
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;
@@ -112,29 +114,10 @@ Page({
       url:'/pages/h5/h5?webview='+url
     });
   },
-  selectClassify(e){
-    var classifyval=e.currentTarget.dataset.item;
-    var oldclassifyval = this.data.classifyval;
-    var totalcardList = this.data.totalcardList;
-    var cardList=[];
-    if (oldclassifyval===classifyval){
-      return;
-    }
-    console.log(classifyval)
-    if (classifyval === '* 全部分类' || classifyval === '* 全部等级' || classifyval === '* 卡组织'){
-      cardList = totalcardList;
-    }else{
-      totalcardList.forEach((item)=>{
-        if (item.classify === classifyval || item.level === classifyval || item.organazition === classifyval){
-          cardList.push(item)
-        }
-      })
-    }
-
+  showWrap(){
+    var isshow=!this.data.isshow;
     this.setData({
-      classifyval: classifyval,
-      clickIndex:-1,
-      cardList
+      isshow: isshow
     })
   }
 });
