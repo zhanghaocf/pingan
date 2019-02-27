@@ -1,6 +1,7 @@
 page{
   background-color: white;
   padding-top: 29rpx;
+  padding-bottom: 98rpx;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -29,14 +30,23 @@ page{
 }
 .cardwrap{
   border-bottom:20rpx solid #f4f5f7;
+  overflow: hidden;
+  overflow-x: auto;
+  display: flex;
+  display: -webkit-flex;
 }
 .swiper-item{
   height:289rpx;
+  width:215rpx;
   box-sizing: border-box;
   font-size: 21rpx;
   color:#6f6f6f;
   text-align: center;
   padding-left: 26rpx;
+  flex-shrink: 0;
+}
+.swiper-item:last-child{
+  padding-right: 26rpx;
 }
 .cardimg{
   width:100%;

@@ -17,7 +17,7 @@
     <image src="{{adver.img}}" class="adverimg" mode="aspectFill" />
   </navigator>
 </view>
-<swiper class="cardwrap" next-margin="{{marleftval}}px">
+<!-- <swiper class="cardwrap" next-margin="{{marleftval}}px">
   <block a:for="{{cardList}}" a:key="id">
     <swiper-item class="carditem">
       <view class="swiper-item">
@@ -27,7 +27,16 @@
       </view>
     </swiper-item>
   </block>
-</swiper>
+</swiper> -->
+<view class="cardwrap" next-margin="{{marleftval}}px">
+  <block a:for="{{cardList}}" a:key="id">
+      <view class="swiper-item">
+        <image src="{{item.img}}" class="cardimg" mode="widthFix" />
+        <view class="title twoline">{{item.title}}</view>
+        <view class="desc oneline">{{item.desc}}</view>
+      </view>
+  </block>
+</view>
 <block a:for="{{descList}}" a:key="id">
   <view class="infolist">
     <navigator url="/pages/h5/h5?webview={{item.url}}">

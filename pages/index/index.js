@@ -19,7 +19,6 @@ Page({
       img: '/assets/images/adver.png',
       url:'https://www.baidu.com'
     },
-    marleftval:0,
     cardList:[
       {
         id:1,
@@ -103,10 +102,6 @@ Page({
     isshow: false
   },
   onLoad() {
-    var marleftval=535*my.getSystemInfoSync().windowWidth/750;
-    this.setData({
-      marleftval
-    })
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;
