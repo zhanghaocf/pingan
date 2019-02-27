@@ -1,11 +1,51 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/h5/h5"
+    "pages/h5/h5",
+    "pages/activity/activity",
+    "pages/card/card",
+    "pages/online/online",
+    "pages/progress/progress"
   ],
   "window": {
-    "defaultTitle": "平安信用卡申请",
+    "defaultTitle": "浦发银行信用卡",
     "titleBarColor": "#fd8411",
     "allowsBounceVertical":"false"
+  },
+  "tabBar":{
+    "textColor": "#a5a5a5",
+    "selectedColor": "#0090e7",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon":"/assets/images/index.png",
+        "activeIcon":"/assets/images/index_a.png"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "name": "极速办卡",
+        "icon":"/assets/images/jisu.png",
+        "activeIcon":"/assets/images/jisu_a.png"
+      },
+      {
+        "pagePath": "pages/progress/progress",
+        "name": "进度查询",
+        "icon":"/assets/images/jindu.png",
+        "activeIcon":"/assets/images/jindu_a.png"
+      },
+      {
+        "pagePath": "pages/online/online",
+        "name": "在线激活",
+        "icon":"/assets/images/online.png",
+        "activeIcon":"/assets/images/online_a.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "name": "热门活动",
+        "icon":"/assets/images/activity.png",
+        "activeIcon":"/assets/images/activity_a.png"
+      }
+    ]
   }
 }

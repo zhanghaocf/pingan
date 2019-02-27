@@ -1,4 +1,3 @@
-<view onTap="closeopera">
   <view class="top">
     <swiper indicator-dots="true"
             autoplay="true" 
@@ -38,6 +37,7 @@
         <view class="youhui oneline">
           {{item.title}}        
           <text class="zhe oneline">{{item.zhe}}</text>
+          {{item.title2}}
           <text class="yhdesc oneline">{{item.desc}}</text>
         </view>
       </navigator>
@@ -46,31 +46,3 @@
   <view class="listwrap {{isPhoneX?'listwrapX':''}}">
     暂无更多内容
   </view>
-  <view class="footer {{isPhoneX?'fix-iphonex-button':''}}">
-    <view class="flexitem">
-      <navigator url="/pages/h5/h5?webview={{footer.jisu}}">
-        极速办卡{{isPhoneX}}
-      </navigator>
-    </view>
-    <view class="flexitem extentd" catchTap="showWrap">
-      办卡进展
-      <view class="activewrap" hidden="{{!isshow}}">
-        <view class="activeitem">
-          <navigator url="/pages/h5/h5?webview={{footer.jindu}}">
-            进度查询
-          </navigator>
-        </view>
-        <view class="activeitem">
-          <navigator url="/pages/h5/h5?webview={{footer.online}}">
-            在线激活
-          </navigator>
-        </view>
-      </view>
-    </view>
-    <view class="flexitem">
-      <navigator url="/pages/h5/h5?webview={{footer.remen}}">
-        热门活动
-      </navigator>
-    </view>
-  </view>
-</view> 

@@ -7,9 +7,9 @@ page{
 .top{
   height:239rpx;
   box-sizing: border-box;
+  border-bottom:20rpx solid #f4f5f7;
 }
 .listwrap{
-  margin-bottom: 98rpx;
   text-align: center;
   height:120rpx;
   font-size: 22rpx;
@@ -33,7 +33,7 @@ page{
   margin-left: 10rpx;
 }
 .listwrapX{
-  margin-bottom: 166rpx;
+  margin-bottom: 68rpx;
 }
 .banner{
   width:698rpx;
@@ -103,7 +103,7 @@ page{
   font-weight: bold;
 }
 .zhe{
-  color:#ff830f;
+  color:#ff0d0b;
 }
 .yhdesc{
   margin-left: 16rpx;
