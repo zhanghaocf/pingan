@@ -43,6 +43,6 @@
       </navigator>
     </view>
   </block>
-  <view class="listwrap {{isPhoneX?'listwrapX':''}}">
+  <view class="listwrap">
     暂无更多内容
   </view>

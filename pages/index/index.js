@@ -105,13 +105,9 @@ Page({
         desc: '简约白金卡',
         url: 'https://www.baidu.com'
       }
-    ],
-    isPhoneX: false
+    ]
   },
   onLoad() {
-    this.setData({
-      isPhoneX:app.globalData.isPhoneX
-    })
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;

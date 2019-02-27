@@ -32,9 +32,6 @@ page{
 .listwrap::after{
   margin-left: 10rpx;
 }
-.listwrapX{
-  margin-bottom: 68rpx;
-}
 .banner{
   width:698rpx;
   height:181rpx!important;
