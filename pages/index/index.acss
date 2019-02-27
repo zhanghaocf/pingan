@@ -7,6 +7,7 @@ page{
 .top{
   height:239rpx;
   box-sizing: border-box;
+  border-bottom:20rpx solid #f4f5f7;
 }
 .listwrap{
   margin-bottom: 98rpx;
