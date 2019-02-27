@@ -4,15 +4,18 @@ Page({
     bannerList:[
       {
         id:1,
-        img:'/assets/images/banner.png'
+        img:'/assets/images/banner.png',
+        url: 'https://www.baidu.com'
       },
       {
         id: 2,
-        img: '/assets/images/banner.png'
+        img: '/assets/images/banner.png',
+        url: 'https://www.baidu.com'
       },
       {
         id: 3,
-        img: '/assets/images/banner.png'
+        img: '/assets/images/banner.png',
+        url: 'https://www.baidu.com'
       }
     ],
     adver:{
@@ -91,6 +94,13 @@ Page({
         zhe: '88折',
         desc: '平安车主信用卡专享',
         url: 'https://www.baidu.com'
+      },
+      {
+        id: 3,
+        title: '最高',
+        zhe: '1200元',
+        desc: '平安信用卡境外笔笔返',
+        url: 'https://www.baidu.com'
       }
     ],
     footer:{
@@ -99,9 +109,13 @@ Page({
       online: 'https://www.baidu.com',
       remen: 'https://www.baidu.com',
     },
-    isshow: false
+    isshow: false,
+    isPhoneX: false
   },
   onLoad() {
+    this.setData({
+      isPhoneX:app.globalData.isPhoneX
+    })
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;
@@ -113,6 +127,15 @@ Page({
     var isshow=!this.data.isshow;
     this.setData({
       isshow: isshow
+    })
+  },
+  closeopera(){
+    var isshow = this.data.isshow;
+    if (!isshow){
+      return;
+    }
+    this.setData({
+      isshow: false
     })
   }
 });
