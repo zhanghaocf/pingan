@@ -5,7 +5,6 @@
   ],
   "window": {
     "defaultTitle": "平安信用卡申请",
-    "titleBarColor": "#fd8411",
-    "allowsBounceVertical":"false"
+    "titleBarColor": "#fd8411"
   }
 }

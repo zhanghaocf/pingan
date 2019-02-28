@@ -167,7 +167,7 @@ page{
   top:14rpx;
   margin-left: -23rpx;
 }
-.activewrap::after{
+/* .activewrap::after{
   display: block;
   content:'';
   width:20rpx;
@@ -203,7 +203,7 @@ page{
 }
 .activeitem:first-child{
    border-top:none;
-}
+} */
 .fix-iphonex-button {
  bottom:68rpx!important;
 }

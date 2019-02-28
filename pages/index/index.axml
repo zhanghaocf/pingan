@@ -1,4 +1,4 @@
-<view onTap="closeopera">
+<!-- <view onTap="closeopera"> -->
   <view class="top">
     <swiper indicator-dots="true"
             autoplay="true" 
@@ -49,12 +49,14 @@
   <view class="footer {{isPhoneX?'fix-iphonex-button':''}}">
     <view class="flexitem">
       <navigator url="/pages/h5/h5?webview={{footer.jisu}}">
-        极速办卡{{isPhoneX}}
+        极速办卡
       </navigator>
     </view>
     <view class="flexitem extentd" catchTap="showWrap">
-      办卡进展
-      <view class="activewrap" hidden="{{!isshow}}">
+      <navigator url="/pages/h5/h5?webview={{footer.chaxun}}">
+        进度查询
+      </navigator>
+      <!-- <view class="activewrap" hidden="{{!isshow}}">
         <view class="activeitem">
           <navigator url="/pages/h5/h5?webview={{footer.jindu}}">
             进度查询
@@ -65,7 +67,7 @@
             在线激活
           </navigator>
         </view>
-      </view>
+      </view> -->
     </view>
     <view class="flexitem">
       <navigator url="/pages/h5/h5?webview={{footer.remen}}">
@@ -73,4 +75,4 @@
       </navigator>
     </view>
   </view>
-</view> 
+<!-- </view>  -->

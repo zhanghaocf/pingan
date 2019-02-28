@@ -108,9 +108,10 @@ Page({
       jindu: 'https://www.baidu.com',
       online: 'https://www.baidu.com',
       remen: 'https://www.baidu.com',
+      chaxun:'https://www.baidu.com'
     },
-    isshow: false,
-    isPhoneX: false
+    // isshow: false,
+     isPhoneX: false
   },
   onLoad() {
     this.setData({
@@ -123,19 +124,19 @@ Page({
       url:'/pages/h5/h5?webview='+url
     });
   },
-  showWrap(){
-    var isshow=!this.data.isshow;
-    this.setData({
-      isshow: isshow
-    })
-  },
-  closeopera(){
-    var isshow = this.data.isshow;
-    if (!isshow){
-      return;
-    }
-    this.setData({
-      isshow: false
-    })
-  }
+  // showWrap(){
+  //   var isshow=!this.data.isshow;
+  //   this.setData({
+  //     isshow: isshow
+  //   })
+  // },
+  // closeopera(){
+  //   var isshow = this.data.isshow;
+  //   if (!isshow){
+  //     return;
+  //   }
+  //   this.setData({
+  //     isshow: false
+  //   })
+  // }
 });
