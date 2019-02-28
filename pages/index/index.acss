@@ -64,7 +64,7 @@ page{
   display: flex;
   display: -webkit-flex;
   -webkit-overflow-scrolling: touch;
-  margin-left: 26rpx;
+  padding-left: 26rpx;
 }
 .swiper-item{
   height:289rpx;
