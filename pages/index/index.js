@@ -20,7 +20,7 @@ Page({
     ],
     adver:{
       img: '/assets/images/adver.png',
-      url:'https://www.baidu.com'
+      url:'https://c.pingan.com/ca/applyIndex?data=9100006910000000000000QK00001xiO_zbdhodUO6_b-23P0z61xwjmji4l_skCTc5-4UJxXfBxxSf6J0uRuxygVAkPXPp1EN4q7ewgbTQMSBxaQqcVniNf3U79PzibieDmd8n-ek0Vnyd2YAh7lSZIlVQa7e818sQibBUGmzkFLBPGELciPEMQNJBPzkM9RHUR9KkYGNA9T1YkvRtyljI2rDjrdU9UciX3Zebj2vke6-se7rg..&sign=x0L8oqXJNO0YIq7tMNvfKppDf6QBzxXfpUW74Sc0g3U.'
     },
     cardList:[
       {
@@ -86,27 +86,27 @@ Page({
         title:'满记低至',
         zhe:'5折',
         desc:'代金券天天乐购',
-        url:'https://www.baidu.com'
+        url:'https://c.pingan.com/ca/applyIndex?data=9100006910000000000000QK00002xiO_zbdhodUO6_b-23P0z61xwjmji4l_skCTc5-4UJw593tgL-rdii14ArP9ioRzhoH5j0aaF-izp5GYNkhyR16ff8UxSSZ0LIckczGPDnGek0Vnyd2YAh7lSZIlVQa7CgxwQMM3aMAHfGaVOhBZlciPEMQNJBPzkM9RHUR9KkYGNA9T1YkvRtyljI2rDjrdU9UciX3Zebj2vke6-se7rg..&sign=bygP8gQrL_vpW1GvQGxXI9NiCWpbNDTI8OMLNWIwquw.'
       },
       {
         id: 2,
         title: '在线冲立享',
         zhe: '88折',
         desc: '平安车主信用卡专享',
-        url: 'https://www.baidu.com'
+        url: 'https://c.pingan.com/ca/applyIndex?data=9100006910000000000000CZ00001ij_blhnliaq2WG7PsyTSau0PyD_oe7-YMH-iwm9VgIwsXrqNNLEJ9zPKTOrsvAQ7MRCy3pPeb6JZdLkfLqsto_h9U8uhXGwa7btgTbw1PaCJbZe3E6s46CtH0VlHrj25AcmbbOXZEKuBlGIRueN1Hw..&sign=kfql5oU-qOGH7nBxKGcHeRTwnrr1wZ6Ae6XlwXwwM2k.'
       },
       {
         id: 3,
         title: '最高',
         zhe: '1200元',
         desc: '平安信用卡境外笔笔返',
-        url: 'https://www.baidu.com'
+        url: 'https://c.pingan.com/ca/applyIndex?data=9100006910000000000000QK00001xiO_zbdhodUO6_b-23P0z61xwjmji4l_skCTc5-4UJxXfBxxSf6J0uRuxygVAkPXPp1EN4q7ewgbTQMSBxaQqcVniNf3U79PzibieDmd8n-ek0Vnyd2YAh7lSZIlVQa7e818sQibBUGmzkFLBPGELciPEMQNJBPzkM9RHUR9KkYGNA9T1YkvRtyljI2rDjrdU9UciX3Zebj2vke6-se7rg..&sign=x0L8oqXJNO0YIq7tMNvfKppDf6QBzxXfpUW74Sc0g3U.'
       }
     ],
     footer:{
-      jisu:'https://zhgroot.cn',
-      remen: 'https://www.baidu.com',
-      chaxun:'https://nginx.zhgroot.cn'
+      jisu:'https://c.pingan.com/ca/applyIndex?data=9100006910000000000000QK00002xiO_zbdhodUO6_b-23P0z61xwjmji4l_skCTc5-4UJw593tgL-rdii14ArP9ioRzhoH5j0aaF-izp5GYNkhyR16ff8UxSSZ0LIckczGPDnGek0Vnyd2YAh7lSZIlVQa7CgxwQMM3aMAHfGaVOhBZlciPEMQNJBPzkM9RHUR9KkYGNA9T1YkvRtyljI2rDjrdU9UciX3Zebj2vke6-se7rg..&sign=bygP8gQrL_vpW1GvQGxXI9NiCWpbNDTI8OMLNWIwquw.',
+      remen: 'http://creditcard.pingan.com/index.shtml',
+      chaxun:'https://bank-static.pingan.com.cn/ca/ccBooking/ccBookingHtml/query/index.html'
     },
     // isshow: false,
      isPhoneX: false
