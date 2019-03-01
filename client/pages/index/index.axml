@@ -1,5 +1,6 @@
-<!-- <view onTap="closeopera"> -->
-  <view class="top">
+<import src="../../templates/noInfo/noInfo.axml" />
+<view onTap="closeopera">
+  <view class="top" a:if="{{bannerList.length>0}}">
     <swiper indicator-dots="true"
             autoplay="true" 
             interval="5000" 
@@ -16,11 +17,14 @@
     </swiper>
   </view>
   <view class="adverwrap">
-    <navigator url="/pages/h5/h5?webview={{adver.url}}">
+    <navigator url="/pages/h5/h5?webview={{adver.url}}" a:if="{{!!adver}}">
       <image src="{{adver.img}}" class="adverimg" mode="aspectFill" />
     </navigator>
+    <block a:else>
+      <template is="noInfo" data="{{message:'广告位还没有哦~'}}"></template>
+    </block>
   </view>
-  <view class="cardwrap" next-margin="{{marleftval}}px">
+  <view class="cardwrap">
     <block a:for="{{cardList}}" a:key="id">
         <view class="swiper-item">
           <navigator class="bannerna" url="/pages/h5/h5?webview={{item.url}}">
@@ -30,6 +34,9 @@
           </navigator>
         </view>
     </block>
+    <block a:if="{{cardList.length===0}}">
+      <template is="noInfo" data="{{message:'卡面信息暂无~'}}"></template>
+    </block>
   </view>
   <block a:for="{{descList}}" a:key="id">
     <view class="infolist">
@@ -38,41 +45,28 @@
         <view class="youhui oneline">
           {{item.title}}        
           <text class="zhe oneline">{{item.zhe}}</text>
+          {{item.title2}}
           <text class="yhdesc oneline">{{item.desc}}</text>
         </view>
       </navigator>
     </view>
   </block>
+  <block a:if="{{descList.length===0}}">
+    <template is="noInfo" data="{{message:'优惠列表信息还没有哦~'}}"></template>
+  </block>
   <view class="listwrap {{isPhoneX?'listwrapX':''}}">
     暂无更多内容
   </view>
-  <view class="footer {{isPhoneX?'fix-iphonex-button':''}}">
-    <view class="flexitem">
-      <navigator url="/pages/h5/h5?webview={{footer.jisu}}">
-        极速办卡
-      </navigator>
-    </view>
-    <view class="flexitem extentd" catchTap="showWrap">
-      <navigator url="/pages/h5/h5?webview={{footer.chaxun}}">
-        进度查询
-      </navigator>
-      <!-- <view class="activewrap" hidden="{{!isshow}}">
-        <view class="activeitem">
-          <navigator url="/pages/h5/h5?webview={{footer.jindu}}">
-            进度查询
-          </navigator>
-        </view>
-        <view class="activeitem">
-          <navigator url="/pages/h5/h5?webview={{footer.online}}">
-            在线激活
-          </navigator>
-        </view>
-      </view> -->
-    </view>
-    <view class="flexitem">
-      <navigator url="/pages/h5/h5?webview={{footer.remen}}">
-        热门活动
-      </navigator>
-    </view>
+  <view class="footer {{isPhoneX?'fix-iphonex-button':''}}" a:if="{{footer.length>0}}">
+    <block a:for="{{footer}}" a:key="id">
+      <view class="flexitem {{item.isextend?'extentd':''}}">
+        <navigator url="/pages/h5/h5?webview={{item.url}}">
+          {{item.name}}
+        </navigator>
+      </view>
+    </block>
   </view>
-<!-- </view>  -->
+</view>
+<view hidden="{{!isLoading}}">
+  <zhloading>稍等片刻</zhloading>
+</view>

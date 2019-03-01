@@ -1,3 +1,4 @@
+@import "../../templates/noInfo/noInfo.acss";
 page{
   background-color: white;
   padding-top: 29rpx;
@@ -167,43 +168,6 @@ page{
   top:14rpx;
   margin-left: -23rpx;
 }
-/* .activewrap::after{
-  display: block;
-  content:'';
-  width:20rpx;
-  height:20rpx;
-  box-sizing: border-box;
-  color:#efefef;
-  border-right: 2rpx solid;
-  border-bottom: 2rpx solid;
-  position:absolute;
-  left:50%;
-  transform: rotate(45deg) translateX(-50%);
-  -webkit-transform: rotate(45deg) translateX(-50%);
-  background-color: white;
-  bottom:-15rpx;
-}
-.activewrap{
-  position: absolute;
-  width: 153rpx;
-  padding:10rpx;
-  border:2rpx solid #efefef;
-  border-radius: 3rpx;
-  bottom:113rpx;
-  background-color: white;
-  left:50%;
-  margin-left: -88.5rpx;
-}
-.activeitem{
-  box-sizing: border-box;
-  height:72rpx;
-  line-height: 72rpx;
-  vertical-align: middle;
-  border-top:3rpx solid #ededed; 
-}
-.activeitem:first-child{
-   border-top:none;
-} */
 .fix-iphonex-button {
  bottom:68rpx!important;
 }
