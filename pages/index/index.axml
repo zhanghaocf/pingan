@@ -1,4 +1,5 @@
 <!-- <view onTap="closeopera"> -->
+  <import-sjs name="hd" from="../../assets/handledata.sjs"/>
   <view class="top">
     <swiper indicator-dots="true"
             autoplay="true" 
@@ -8,7 +9,7 @@
             class='banner'>
       <block a:for="{{bannerList}}" a:key="id">
           <swiper-item>
-            <navigator class="bannerna" url="/pages/h5/h5?webview={{item.url}}">
+            <navigator class="bannerna" url="/pages/h5/h5?webview={{hd.handleUrl(item.url)}}">
             <image src="{{item.img}}" class="slide-image swipeImg" mode="aspectFill"/>
             </navigator>
           </swiper-item>
@@ -16,14 +17,14 @@
     </swiper>
   </view>
   <view class="adverwrap">
-    <navigator url="/pages/h5/h5?webview={{adver.url}}">
+    <navigator url="/pages/h5/h5?webview={{hd.handleUrl(adver.url)}}">
       <image src="{{adver.img}}" class="adverimg" mode="aspectFill" />
     </navigator>
   </view>
   <view class="cardwrap" next-margin="{{marleftval}}px">
     <block a:for="{{cardList}}" a:key="id">
         <view class="swiper-item">
-          <navigator class="bannerna" url="/pages/h5/h5?webview={{item.url}}">
+          <navigator class="bannerna" url="/pages/h5/h5?webview={{hd.handleUrl(item.url)}}">
             <image src="{{item.img}}" class="cardimg" mode="widthFix" />
             <view class="title twoline">{{item.title}}</view>
             <view class="desc oneline">{{item.desc}}</view>
@@ -33,7 +34,7 @@
   </view>
   <block a:for="{{descList}}" a:key="id">
     <view class="infolist">
-      <navigator url="/pages/h5/h5?webview={{item.url}}">
+      <navigator url="/pages/h5/h5?webview={{hd.handleUrl(item.url)}}">
         <image class="yhimg" src="/assets/images/right.png" mode="aspectFill" />
         <view class="youhui oneline">
           {{item.title}}        
@@ -48,12 +49,12 @@
   </view>
   <view class="footer {{isPhoneX?'fix-iphonex-button':''}}">
     <view class="flexitem">
-      <navigator url="/pages/h5/h5?webview={{footer.jisu}}">
+      <navigator url="/pages/h5/h5?webview={{hd.handleUrl(footer.jisu)}}">
         极速办卡
       </navigator>
     </view>
     <view class="flexitem extentd" catchTap="showWrap">
-      <navigator url="/pages/h5/h5?webview={{footer.chaxun}}">
+      <navigator url="/pages/h5/h5?webview={{hd.handleUrl(footer.chaxun)}}">
         进度查询
       </navigator>
       <!-- <view class="activewrap" hidden="{{!isshow}}">
@@ -69,10 +70,10 @@
         </view>
       </view> -->
     </view>
-    <view class="flexitem">
+    <!-- <view class="flexitem">
       <navigator url="/pages/h5/h5?webview={{footer.remen}}">
         热门活动
       </navigator>
-    </view>
+    </view> -->
   </view>
 <!-- </view>  -->

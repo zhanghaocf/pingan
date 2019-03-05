@@ -3,6 +3,7 @@ Page({
     webview:''
   },
   onLoad(options){
+    console.log(options.webview)
     this.setData({
       webview: options.webview
     })
