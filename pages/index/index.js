@@ -19,7 +19,7 @@ Page({
       }
     ],
     adver:{
-      img: '/assets/images/adver.png',
+      img: '/assets/images/adver.jpg',
       url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00001'
     },
     cardList:[
@@ -34,7 +34,7 @@ Page({
         id: 2,
         img: '/assets/images/carowner.jpg',
         title: '平安车主卡',
-        desc: '加油88折年返960',
+        desc: '最高年返720',
         url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=3&versionNo=R10310&scc=910000691&mt=CZ00001'
       },
       {
@@ -90,7 +90,7 @@ Page({
       },
       {
         id: 2,
-        title: '在线冲立享',
+        title: '加油',
         zhe: '88折',
         desc: '平安车主信用卡专享',
         url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=3&versionNo=R10310&scc=910000691&mt=CZ00001'
