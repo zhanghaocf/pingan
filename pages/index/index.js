@@ -4,17 +4,17 @@ Page({
     bannerList:[
       {
         id:1,
-        img:'/assets/images/banner.png',
+        img:'/assets/images/banner.jpg',
         url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
       },
       {
         id: 2,
-        img: '/assets/images/banner.png',
+        img: '/assets/images/banner.jpg',
         url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
       },
       {
         id: 3,
-        img: '/assets/images/banner.png',
+        img: '/assets/images/banner.jpg',
         url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
       }
     ],
