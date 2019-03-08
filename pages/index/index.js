@@ -1,6 +1,8 @@
 const app = getApp();
+const httpUrl = require("../../utils/http_util.js");
 Page({
   data: {
+    isLoading:false,
     bannerList:[
       {
         id:1,
@@ -114,6 +116,13 @@ Page({
     this.setData({
       isPhoneX:app.globalData.isPhoneX
     })
+    this.getBannerHttp().then(res=>{
+      console.log(res.data);
+    })
+  },
+  getBannerHttp(){
+    let domain=app.globalData.domainName;
+    return httpUrl.Get(domain+"/getBannerList",true,this,app);
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;

@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents":{
+    "zxloading":"/components/component-zxLoading/component-zxLoading"
+  }
+}

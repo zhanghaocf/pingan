@@ -1,6 +1,7 @@
 App({
   globalData:{
-    isPhoneX:false
+    isPhoneX:false,
+    domainName:'https://rongmo.zhgroot.cn/tp5rongmo/public'
   },
   onLaunch(){
     var model = my.getSystemInfoSync().model;
