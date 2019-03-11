@@ -152,10 +152,10 @@ page{
 .flexitem:first-child{
   border-left:none;
 }
-.extentd{
+.extentd,.flexitem:last-child{
   position:relative;
 }
-.extentd::before{
+.extentd::before,.flexitem:last-child::before{
   content:'';
   display: block;
   height:6rpx;
