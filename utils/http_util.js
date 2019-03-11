@@ -44,7 +44,7 @@ function deletePromisenoauth(url, callback) {
       url: url,
       method: 'DELETE',
       success: function (result) {
-        var data = result;
+        var data = result.data;
           if (!!callback) {
             callback(data);
           }
@@ -63,7 +63,7 @@ function getPromisenoauth(url, callback) {
       url: url,
       method: 'GET',
       success: function (result) {
-        var data = result;
+        var data = result.data;
           if (!!callback) {
             callback(data);
           }
@@ -82,7 +82,7 @@ function postpromisenoauth(url, data, callback) {
       method: 'POST',
       data: data,
       success: function (result) {
-        var data = result;
+        var data = result.data;
         if (!!callback) {
           callback(data)
         }
@@ -99,11 +99,12 @@ function promiseAll(arr, callback, page) {
   page.setData({
     isLoading: true
   });
-  Promise.all(arr).then((val) => {
+  return Promise.all(arr).then((val) => {
     page.setData({
       isLoading: false
     })
-    callback(val)
+    !!callback&&callback(val);
+    return val;
   }).catch((val) => {
     page.setData({
       isLoading: false
