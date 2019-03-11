@@ -3,23 +3,7 @@ const httpUrl = require("../../utils/http_util.js");
 Page({
   data: {
     isLoading:false,
-    bannerList:[
-      {
-        id:1,
-        img:'/assets/images/banner.jpg',
-        url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
-      },
-      {
-        id: 2,
-        img: '/assets/images/banner.jpg',
-        url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
-      },
-      {
-        id: 3,
-        img: '/assets/images/banner.jpg',
-        url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=26&versionNo=R10310&scc=910000691&mt=YT00001'
-      }
-    ],
+    bannerList:[],
     adver:{
       img: '/assets/images/adver.jpg',
       url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00001'
@@ -116,13 +100,20 @@ Page({
     this.setData({
       isPhoneX:app.globalData.isPhoneX
     })
-    this.getBannerHttp().then(res=>{
-      console.log(res.data);
-    })
+    this.getDataHttp();
   },
   getBannerHttp(){
     let domain=app.globalData.domainName;
-    return httpUrl.Get(domain+"/getBannerList",true,this,app);
+    return httpUrl.Get(domain+"/getBannerList",true,this,app).then(res=>{
+      this.setData({
+        bannerList:res
+      });
+      return res;
+    })
+  },
+  getDataHttp(){
+    let arr=[this.getBannerHttp()]
+    return httpUrl.PromiseAll(arr,null,this);
   },
   moveH5(e){
     const url=e.currentTarget.dataset.url;

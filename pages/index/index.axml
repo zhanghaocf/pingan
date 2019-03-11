@@ -1,7 +1,7 @@
 <!-- <view onTap="closeopera"> -->
   <import-sjs name="hd" from="../../assets/handledata.sjs"/>
   <zxloading a:if="{{isLoading}}">快马加鞭中</zxloading>
-  <view class="top">
+  <view class="top" a:if="{{bannerList.length>0}}">
     <swiper indicator-dots="true"
             autoplay="true" 
             interval="5000" 
