@@ -1,3 +1,4 @@
+@import "../../templates/noInfo/noInfo.acss";
 page{
   background-color: white;
   padding-top: 29rpx;

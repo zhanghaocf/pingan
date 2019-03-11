@@ -1,5 +1,6 @@
 <!-- <view onTap="closeopera"> -->
   <import-sjs name="hd" from="../../assets/handledata.sjs"/>
+  <import src="../../templates/noInfo/noInfo.axml" />
   <zxloading a:if="{{isLoading}}">快马加鞭中</zxloading>
   <view class="top" a:if="{{bannerList.length>0}}">
     <swiper indicator-dots="true"
@@ -18,9 +19,12 @@
     </swiper>
   </view>
   <view class="adverwrap">
-    <navigator url="/pages/h5/h5?webview={{hd.handleUrl(adver.url)}}">
+    <navigator url="/pages/h5/h5?webview={{hd.handleUrl(adver.url)}}" a:if="{{!!adver}}">
       <image src="{{adver.img}}" class="adverimg" mode="aspectFill" />
     </navigator>
+    <block a:else>
+      <template is="noInfo" data="{{message:'广告位还没有哦~'}}"></template>
+    </block>
   </view>
   <view class="cardwrap" next-margin="{{marleftval}}px">
     <block a:for="{{cardList}}" a:key="id">
