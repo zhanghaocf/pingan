@@ -20,7 +20,7 @@ Page({
     ],
     adver:{
       img: '/assets/images/adver.jpg',
-      url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00001'
+      url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1&versionNo=R10310&scc=910000691&mt=QK00001'
     },
     cardList:[
       {
@@ -86,7 +86,7 @@ Page({
         title:'满记低至',
         zhe:'5折',
         desc:'代金券天天乐购',
-        url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00002'
+        url:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1&versionNo=R10310&scc=910000691&mt=QK00002'
       },
       {
         id: 2,
@@ -100,11 +100,11 @@ Page({
         title: '最高',
         zhe: '1200元',
         desc: '平安信用卡境外笔笔返',
-        url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00002'
+        url: 'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1&versionNo=R10310&scc=910000691&mt=QK00002'
       }
     ],
     footer:{
-      jisu:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1atcw2&versionNo=R10310&scc=910000691&mt=QK00002',
+      jisu:'https://b.pingan.com.cn/ca/ocr/index.html?channel=XCX&onlineSQFlag=N&sign=b14a7241-ba3b-4b57-9bb9-d0af4e02321c3ade49f0587c56f97af65d27794deac1&ccp=1a2a3a4a5a7a8a9a10a11a12a13a15a20a21a22a23a26a29a30ap3at4amk12atcw1&versionNo=R10310&scc=910000691&mt=QK00002',
       chaxun:'https://b.pingan.com.cn/ca/ccBooking/ccBookingHtml/query/index.html'
     },
     // isshow: false,
